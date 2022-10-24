@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 
-name:           TestApp
+name:           App
 version:        0.1.0.0
 description:    Please see the README on GitHub at <https://github.com/githubuser/TestApp#readme>
 homepage:       https://github.com/githubuser/TestApp#readme
@@ -23,39 +23,19 @@ source-repository head
   type: git
   location: https://github.com/githubuser/TestApp
 
-library
-  exposed-modules:
-      Lib
-  other-modules:
-      Paths_TestApp
-  hs-source-dirs:
-      src
-  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
-  build-depends:
-      base >=4.7 && <5
-  default-language: Haskell2010
-
 executable TestApp-exe
   main-is: Main.hs
-  other-modules:
-      Paths_TestApp
+--  other-modules:
+--      Paths_TestApp
   hs-source-dirs:
-      app
+      src
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      TestApp
-    , base >=4.7 && <5
+      base >=4.7 && <5
+
+  build-depends:
+      Lib1
+
   default-language: Haskell2010
 
-test-suite TestApp-test
-  type: exitcode-stdio-1.0
-  main-is: Spec.hs
-  other-modules:
-      Paths_TestApp
-  hs-source-dirs:
-      test
-  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-      TestApp
-    , base >=4.7 && <5
-  default-language: Haskell2010
+

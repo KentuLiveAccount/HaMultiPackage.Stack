@@ -1,0 +1,6 @@
+packages:
+    Lib1/
+    App/
+
+tests: True
+optimization: False
