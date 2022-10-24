@@ -31,6 +31,7 @@ resolver:
 #   - wai
 packages:
 - Lib1/
+- Lib2/
 - App/
 
 # Dependency packages to be pulled from upstream that are not in the resolver.

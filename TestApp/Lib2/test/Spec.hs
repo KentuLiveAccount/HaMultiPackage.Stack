@@ -1,4 +1,4 @@
-import Lib1
+import Lib2
 
 main :: IO ()
 main = putStrLn "Test suite not yet implemented"
